@@ -74,7 +74,7 @@ class PointsController {
     await trx("point_items").insert(pointItems);
 
     await trx.commit();
-
+    console.log("point created");
     return response.json({
       id: pointId,
       ...point,
